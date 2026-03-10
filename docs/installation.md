@@ -8,3 +8,15 @@ MariaDB was chosen due to its strong compatibility with MySQL, and fast performa
 
 *sudo apt update*
 *sudo apt install mariadb-server*
+
+
+## Apache web server
+
+Install Apache: *sudo apt install apache2*
+
+Verify Service: *sudo systemctl status apache2*
+
+Test Locally: *curl localhost*
+
+Apache runs as the 'www-data' user and will be used to the serve the Nextcloud web interface.
+
