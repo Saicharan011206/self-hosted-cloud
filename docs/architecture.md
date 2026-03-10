@@ -1,25 +1,48 @@
-# System Architecture
+## System Components
 
-## Storage Layout
+The personal cloud system is composed of serveral core layers.
 
-The server uses two storage devices:
+### Operating System
 
-**System Disk:** /dev/sdb2 (454 GB)
+Debian Linux running on a repurposed laptop server.
 
-Used For:
+### Networking
+
+Secure remote access is provided via Tailscale VPN.
+
+### Web Server 
+
+Apache will serve the nextcloud web interface.
+
+### Database
+
+MariaDB is used to store application metadata such as:
+
+- User Accounts
+- File Metadata
+- Sharing Permissions
+- System Configuration
+
+### Storage
+
+Two storage devices are used:
+
+**System Disk:** /dev/sdb (465 GB)
+
+Contains:
+
 - Debian OS
-- Apache Web Server
-- MariaDB Database
-- Nextcloud Application
+- Apache
+- MariaDB
+- Nextcloud Application Files
 
-**Data Disk:** /dev/sda (916 GB)
+**Data Disk:** /dev/sda (931 GB)
 
-Mounted at: /storage (ext4 fs)
+Mounted At: */storage*
 
 Used For:
+
 - Nextcloud user files
-- Personal Cloud Storage
+- personal cloud storage
 
-Nextcloud Data Directory:
-
-/storage/nextcloud-data
+Nextcloud Data Directory: */storage/nextcloud-data*

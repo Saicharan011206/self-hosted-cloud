@@ -39,3 +39,17 @@ Restart SSH Service:
 - Prevents brute force attacks
 - Enables secure authentication
 - Industry standard practice for Linux users
+
+## Database Security
+
+MariaDB is configured with dedicated database user for the nextcloud application instead of using the root account.
+
+This follows principle of least privilege.
+
+Database User: **nextclouduser@localhost**
+
+Permissions:
+
+Full access only to 'nextcloud' database.
+
+This prevents other system databases from being accessed by this application.
