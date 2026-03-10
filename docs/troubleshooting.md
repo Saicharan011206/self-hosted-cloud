@@ -1,3 +1,9 @@
+# Troubleshooting Guide
+
+This document records issues encountered during server setup and their resolution.
+
+--------------------------------------------------------------------------------------------
+
 ### Apache Port Conflict Resolution
 
 During apache installation, the server failed to start due the port 80 being occupied by Pi-hole.
