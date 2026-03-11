@@ -46,3 +46,10 @@ Used For:
 - personal cloud storage
 
 Nextcloud Data Directory: */storage/nextcloud-data*
+
+### Application Runtime
+
+PHP 8.4 is used as the runtime environment for the Nextcloud application.
+
+Apache integrates with PHP using the 'mod_php' module to execute PHP scripts and generate dynamic web content.
+
