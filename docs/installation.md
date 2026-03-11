@@ -54,3 +54,60 @@ Settings Include:
 - upload_file_maxsize= 10G
 - post_max_size= 10g
 - max_execution_time= 360
+
+## Nextcloud Installation
+
+Nextcloud was delpoyed as the self-hosted cloud platform on the Debian Server.
+
+### Download Nextcloud
+
+*cd /tmp*
+
+*wget https://download.nextcloud.com/server/releases/latest.tar.bz2*
+
+*tar -xjf latest.tar.bz2*
+
+### Move Nextcloud to Web Directory
+
+*sudo mv /tmp/nextcloud /var/www/*
+
+### Set Permissions
+
+Nextcloud must be owned by the Apache user.
+
+*sudo chown -R www-data:www-data/var/www/nextcloud*
+
+*sudo chmod -R 750 /var/www/nextcloud*
+
+### Aapache Virtual Host Configuration
+
+File:
+
+*/etc/apache2/sites-available/nextcloud.conf*
+
+Configuration:
+
+<VirtualHost *:80>
+    DocumentRoot /var/www/nextcloud
+
+<Directory /var/www/nextcloud/>
+    Require all granted
+    AllowOverride All
+    Options FollowSymLinks MultiViews
+</Directory>
+
+ErrorLog ${APACHE_LOG_DIR}/nextcloud_error.log
+CustomLog ${APACHE_LOG_DIR}/nextcloud_access.log combined
+<VirtualHost>
+
+Enable the site:
+
+*sudo a2ensite nextcloud.conf*
+
+*sudo a2dissite 000-default.conf*
+
+*sudo a2mod rewrite*
+
+*sudo systemctl restart apache2*
+
+
