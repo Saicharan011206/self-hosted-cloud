@@ -159,3 +159,15 @@ This command performs several maintenance tasks including:
 - Clearing application caches
 
 Since the deployment was a fresh installation, most repair tasks completed immediately without requiring large data migrations.
+
+## Maintenance Window Configuration
+
+Nextcloud recommended configuring a maintenance window to ensure that resource-intensive background jobs run during low usage hours.
+
+The maintenance window was configured in the Nextcloud configuration file.
+
+File: */var/www/nextcloud/config/config.php*
+
+Configuration Added:
+
+'maintenance_window_start'=>1
