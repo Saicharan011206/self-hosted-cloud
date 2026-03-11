@@ -53,3 +53,30 @@ Permissions:
 Full access only to 'nextcloud' database.
 
 This prevents other system databases from being accessed by this application.
+
+## Enforcing HTTPS Redirect
+
+Nextcloud reported that the instance was accessible over HTTP,
+which is insecure.
+
+To enforce encrypted connections, Apache was configured to redirect
+all HTTP traffic to HTTPS.
+
+File: */etc/apache2/sites-available/nextcloud.conf*
+
+Configuration:
+
+<VirtualHost *:80>
+    ServerName 100.88.187.43
+    DocumentRoot /var/www/nextcloud
+
+    Redirect permanent / https://100.88.187.43/
+
+    <Directory /var/www/nextcloud/>
+        Require all granted
+        AllowOverride All
+        Options FollowSymLinks MultiViews
+    </Directory>
+</VirtualHost>
+
+After modifying the configuration, Apache was restarted.
