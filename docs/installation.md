@@ -140,3 +140,22 @@ The following command was executed to add the recommended indices:
 *sudo -u www-data php/var/www/nextcloud/occ db:add-missing-indices*
 
 This operation updates the databse to improve lookup performance for certain queries used by Nextcloud.
+
+## Mimetype Migration and System Repair
+
+After installation, Nextcloud reported that mimetype migrations were available.
+
+Mimetype migrations update how filetypes are recognized and processed by the Nextcloud System.
+
+The repair operation was executed using the Nextcloud Command Line Interface:
+
+*sudo -u www-data php/var/www/nextcloud/occ maintenance:repair --include-expensive*
+
+This command performs several maintenance tasks including:
+
+- Updating internal database schemas
+- Repairing file metadata
+- Registering background maintenance jobs
+- Clearing application caches
+
+Since the deployment was a fresh installation, most repair tasks completed immediately without requiring large data migrations.
