@@ -129,3 +129,14 @@ File: */var/www/nextcloud/config/config.php*
 Configuration Added: **'memcache.local'=>'\OC\Memcache\APCu'**
 
 The enables APCu as the local memory cache for the Nextcloud instance.
+
+
+## Database Index Optimization
+
+Nextcloud reported missing optional database indices which can improve query performance.
+
+The following command was executed to add the recommended indices:
+
+*sudo -u www-data php/var/www/nextcloud/occ db:add-missing-indices*
+
+This operation updates the databse to improve lookup performance for certain queries used by Nextcloud.
