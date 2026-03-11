@@ -110,4 +110,22 @@ Enable the site:
 
 *sudo systemctl restart apache2*
 
+## PHP Memory Cache (APCu)
 
+To improve Nextcloud performance, APCu caching was confugured.
+
+APCu provides in-memory caching for PHP applications reduces database queries during normal operations.
+
+### Installation
+
+*sudo apt install php-apcu*
+
+*sudo systemctl restart apache2*
+
+### Nextcloud COnfiguration
+
+File: */var/www/nextcloud/config/config.php*
+
+Configuration Added: **'memcache.local'=>'\OC\Memcache\APCu'**
+
+The enables APCu as the local memory cache for the Nextcloud instance.
