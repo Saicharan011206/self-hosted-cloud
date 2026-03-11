@@ -80,3 +80,16 @@ Configuration:
 </VirtualHost>
 
 After modifying the configuration, Apache was restarted.
+
+## Enabling HSTS (HTTP Strict Transport Security)
+
+To improve HTTPS security, the HSTS header was enabled in Apache.
+
+File: */etc/apache2/sites-available/nextcloud-ssl.conf*
+
+Configuration:
+
+Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains"
+
+HSTS forces browsers to always use HTTPS when connecting to the server,
+preventing protocol downgrade attacks.
