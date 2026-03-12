@@ -93,3 +93,22 @@ Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains
 
 HSTS forces browsers to always use HTTPS when connecting to the server,
 preventing protocol downgrade attacks.
+
+## Firewall Integration
+
+To harden the server, UFW (Uncomplicated Firewall) was configured.
+
+Allowed Ports:
+
+- 22/tcp SSH Access
+- 80/tcp HTTP (redirect to HTTPS)
+- 443/tcp Netdata Monitoring Dashboard
+- 19999/tcp Netcloud Monitoring Dashboard 
+
+Commands: 
+- *sudo apt install ufw*
+- *sudo ufw allow 22/tcp*
+- *sudo ufw allow 443/tcp*
+- *sudo ufw allow 80/tcp*
+- *sudo ufw allow 19999/tcp*
+- *sudo ufw enable*
