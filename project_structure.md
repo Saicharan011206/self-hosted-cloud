@@ -18,6 +18,14 @@
 
 - Automation scripts used to install dependencies, deploy Nextcloud, and manage backups.
 
+- */install_dependencies.sh* => Installs all required system packages.
+
+- */setup_database.sh* => Creats the MariaDB database and the user.
+
+- */install_nextcloud.sh* => Downloads and installs the Nextcloud server.
+
+- */backup.sh* => Creates backups for Nextcloud data and database.
+
 **README.md**
 
 - Overivew of the Project
