@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# =============================================================
+# Nextcloud Backup Script
+# Author: Sai Charan
+# Date: 2024-06-01
+# Description:
+# This script creates a backup of the Nextcloud data directory and the associated database.
+# It organizes backups by date and removes backups older than 7 days.
+# =============================================================
+
+
 DATE=$(date +%F)
 BACKUP_BASE="/storage/backups"
 BACKUP_DIR="$BACKUP_BASE/$DATE"
