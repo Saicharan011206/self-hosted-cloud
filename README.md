@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Personal Cloud Infrastructure Banner">
+</p>
+
 # Personal Cloud Infrastructure
 
 ![OS](https://img.shields.io/badge/OS-Debian-red)
