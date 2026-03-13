@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Personal Cloud Infrastructure Banner" width="750>
+  <img src="assets/banner.png" alt="Personal Cloud Infrastructure Banner" width="900">
 </p>
 
 # Personal Cloud Infrastructure
