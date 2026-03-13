@@ -2,6 +2,7 @@
 
 This repository is organized to separate configuration, automation scripts, and documentation for the personal cloud infrastructure project.
 
+```
 .
 ├── config
 │   ├── apache-nextcloud.conf
@@ -34,6 +35,7 @@ This repository is organized to separate configuration, automation scripts, and 
     ├── install_dependencies.sh
     ├── install_nextcloud.sh
     └── setup_database.sh
+```
 
 ---
 
