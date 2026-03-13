@@ -1,7 +1,8 @@
 # Personal Cloud Infrastructure
 
-![Linux](https://img.shields.io/badge/Linux-Debian-red)
-![Nextcloud](https://img.shields.io/badge/Cloud-Nextcloud-blue)
+![OS](https://img.shields.io/badge/OS-Debian-red)
+![Cloud](https://img.shields.io/badge/Platform-Nextcloud-blue)
+![VPN](https://img.sheilds.io/badge/Networking-Tailscale-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 A self-hosted private cloud built using **Nextcloud, Apache, MariaDB, and Tailscale** on a repurposed Debian server.
@@ -21,6 +22,22 @@ This system provides a self-hosted cloud platform where users can:
 - maintain full control over their infrastructure
 
 The system is deployed on a **repurposed laptop running Debian Linux** and is accessible securely through **Tailscale VPN**
+
+---
+
+## Project Motivation
+
+This project was built to explore the design and operation of a
+self-hosted cloud infrastructure using open-source tools.
+
+The goal was to build a system that provides:
+
+- secure remote file access
+- infrastructure automation
+- operational monitoring
+- clear technical documentation
+
+while maintaining full control over the underlying hardware and software stack.
 
 ---
 
@@ -52,15 +69,14 @@ Detailed architecture documentation is available here: [architecture.md](docs/ar
 
 # Key Features
 
-- Self-hosted cloud storage
-- Secure remote access using **Tailscale VPN**
-- HTTPS encryption
-- Dedicated storage disk for user data
-- MariaDB database backend
-- Automated installation scripts
-- Server monitoring using **Netdata**
-- Backup automation
-- Extensive operational documentation
+| Feature | Description |
+|-------|-------------|
+| Self-Hosted Cloud | Private file storage using Nextcloud |
+| Secure Remote Access | Tailscale VPN connectivity |
+| Dedicated Storage Disk | Separate disk for user data |
+| Monitoring | Real-time server monitoring with Netdata |
+| Automated Setup | Deployment scripts and Makefile |
+| Documentation | Full infrastructure documentation |
 
 ---
 
