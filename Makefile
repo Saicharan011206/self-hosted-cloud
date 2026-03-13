@@ -26,5 +26,3 @@ help:
 	@echo "  database    - Set up the database"
 	@echo "  nextcloud   - Install Nextcloud"
 	@echo "  help        - Show this help message"
-
-	
