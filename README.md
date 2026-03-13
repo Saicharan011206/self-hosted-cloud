@@ -2,7 +2,7 @@
 
 ![OS](https://img.shields.io/badge/OS-Debian-red)
 ![Cloud](https://img.shields.io/badge/Platform-Nextcloud-blue)
-![VPN](https://img.sheilds.io/badge/Networking-Tailscale-purple)
+![VPN](https://img.shields.io/badge/Networking-Tailscale-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 A self-hosted private cloud built using **Nextcloud, Apache, MariaDB, and Tailscale** on a repurposed Debian server.
@@ -185,7 +185,21 @@ Common issues encountered during deployment and their solutions are documented h
 
 # Screenshots
 
-Screenshots of the deployed system are available in: [screenshots](docs/screenshots/)
+Screenshots of the deployed system:
+
+![login](docs/screenshots/nextcloud-login-page.png)
+
+
+![dashboard](docs/screenshots/dashboard-after-login.png)
+
+
+![filesview](docs/screenshots/files-view.png)
+
+
+![netdata01](docs/screenshots/netdata-dashboard-01.png)
+
+
+![netdata02](docs/screenshots/nextdata-dashboard-02.png)
 
 ---
 
