@@ -25,7 +25,7 @@ This system provides a self-hosted cloud platform where users can:
 - monitor server health
 - maintain full control over their infrastructure
 
-The system is deployed on a **repurposed laptop running Debian Linux** and is accessible securely through **Tailscale VPN**
+The system is deployed on a **repurposed laptop running Debian Linux** and is accessible securely through **Tailscale VPN**.
 
 ---
 
